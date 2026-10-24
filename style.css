@@ -1,0 +1,273 @@
+
+/* 1. Basic browser reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f9fc;
+  color: #14243a;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2. Navigation bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 8%;
+  background: white;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #e52b3b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #526176;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #e52b3b;
+}
+
+.nav-button,
+.button {
+  display: inline-block;
+  padding: 12px 19px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav-button,
+.button-primary {
+  color: white;
+  background: #e52b3b;
+}
+
+.nav-button:hover,
+.button-primary:hover {
+  background: #c81f30;
+  transform: translateY(-2px);
+}
+
+/* 3. Hero section */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 8%;
+  color: white;
+  background: linear-gradient(120deg, #101f35, #243c59);
+}
+
+.eyebrow {
+  color: #ff858e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.hero-description {
+  max-width: 480px;
+  color: #d6deea;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-secondary {
+  border: 1px solid #8594a8;
+  color: white;
+}
+
+.button-secondary:hover {
+  background: #ffffff18;
+}
+
+/* 4. Donation visual */
+.hero-visual {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  border: 1px solid #ffffff25;
+  border-radius: 24px;
+  background: radial-gradient(circle, #e52b3b55, #ffffff05 70%);
+}
+
+.blood-drop {
+  display: grid;
+  place-items: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #e52b3b;
+  box-shadow: 0 12px 45px #e52b3b55;
+  font-size: 48px;
+  color: white;
+}
+
+.hero-visual p {
+  color: #f1f4f9;
+  font-weight: 700;
+}
+
+/* 5. Feature cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 55px 8%;
+}
+
+.feature-card {
+  padding: 28px;
+  background: white;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px #14243a08;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: #fff0f1;
+  color: #e52b3b;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.feature-card h2 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.feature-card p,
+.about p,
+.cta p {
+  color: #68778b;
+}
+
+/* 6. About and call to action */
+.about,
+.cta {
+  padding: 55px 8%;
+  text-align: center;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 12px auto 0;
+}
+
+.cta {
+  background: #eef3f9;
+}
+
+.cta p {
+  margin: 10px 0 22px;
+}
+
+/* 7. Footer */
+footer {
+  padding: 25px 8%;
+  background: #101f35;
+  color: #d6deea;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* 8. Responsive layout for phones and tablets */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 5%;
+  }
+
+  .hero-visual {
+    min-height: 220px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 35px 5%;
+  }
+
+  .about,
+  .cta {
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .nav-links {
+    gap: 13px;
+    font-size: 13px;
+  }
+}
